@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-*This script displays lines containing 'bash' from the list of running processes*
+*This script displays PID and name of processes containing 'bash' in their name*
 
-*shellcheck disable=SC2009*
-ps -eo pid,ppid,user,%cpu,%mem,cmd --forest | grep bash
+pgrep -l bash
